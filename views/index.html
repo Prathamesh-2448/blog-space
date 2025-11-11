@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Space - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Blog Space</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="/" class="nav-link active">Home</a>
+                <a href="#" class="nav-link" data-category="Technology">Technology</a>
+                <a href="#" class="nav-link" data-category="Travel">Travel</a>
+                <a href="#" class="nav-link" data-category="Environment">Environment</a>
+            </div>
+            <div class="nav-auth">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search blogs...">
+                    <button id="searchBtn">🔍</button>
+                </div>
+                <a href="/login" id="loginLink" class="btn btn-primary">Login</a>
+                <a href="/register" id="registerLink" class="btn btn-secondary">Register</a>
+
+                <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="userGreeting">
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" id="favoritesLink" style="display: none;">Favorites</a></li>
+                        <li><a class="dropdown-item" href="#" id="myBlogsLink" style="display: none;">My Blogs</a></li>
+                        <li><a class="dropdown-item" href="#" id="logoutBtn" style="display: none;">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+     <div class="alert alert-warning alert-dismissible fade show" role="alert" style="display:none;" id="logout-alert-bar">
+            <strong>Logout Successful</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    
+    <section class="hero">
+        <div class="container">
+            <h2 id="heroTitle">Welcome to Blog Space</h2>
+            <p id="heroSubtitle">Explore blogs about Technology, Travel, and Environment</p>
+            <a href="/create-blog" id="createBlogLink" class="btn btn-success" style="display: none;">Create Blog</a>
+        </div>
+    </section>
+
+    <!-- Blogs Grid -->
+    <section class="blogs-section">
+        <div class="container">
+            <div id="blogsGrid" class="blogs-grid">
+                <!-- Blogs will be loaded here dynamically -->
+            </div>
+            <div id="noBlogsMessage" class="no-blogs" style="display: none;">
+                <p>No blogs found. Be the first to create one!</p>
+            </div>
+            <div id="loadingSpinner" class="loading">
+                <p>Loading blogs...</p>
+            </div>
+        </div>
+
+        
+        <!-- <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="d-flex">
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+    <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+</div> -->
+
+
+
+
+    </section>
+    <script src="/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

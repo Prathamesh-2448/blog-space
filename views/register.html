@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Blog Space</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1><a href="/" style="color: inherit; text-decoration: none;">📝 Blog Space</a></h1>
+            </div>
+        </div>
+    </nav>
+
+    <div class="auth-container">
+        <div class="auth-card">
+            <h2>Register for Blog Space</h2>
+            <form id="registerForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <small>Must contain: 8+ characters, uppercase, lowercase, number, special character</small>
+                </div>
+                <div class="form-group">
+                    <label for="userType">Register as</label>
+                    <select id="userType" name="userType" required>
+                        <option value="">Select...</option>
+                        <option value="user">Reader</option>
+                        <option value="creator">Blogger/Creator</option>
+                    </select>
+                </div>
+                <div class="form-group" id="categoryGroup" style="display: none;">
+                    <label for="category">Blogging Category</label>
+                    <select id="category" name="category">
+                        <option value="">Select category...</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Travel">Travel</option>
+                        <option value="Environment">Environment</option>
+                    </select>
+                </div>
+                <div id="errorMessage" class="error-message"></div>
+                <button type="submit" class="btn btn-primary btn-full">Register</button>
+            </form>
+            <p class="auth-switch">
+                Already have an account? <a href="/login">Login here</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="/js/auth.js"></script>
+</body>
+</html>
